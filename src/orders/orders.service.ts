@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
-import { OnEvent } from '@nestjs/event-emitter';
 
 @Injectable()
 export class OrdersService {
@@ -23,10 +22,5 @@ export class OrdersService {
 
   remove(id: number) {
     return `This action removes a #${id} order`;
-  }
-
-  @OnEvent('product.relationCreated')
-  patchRelations(payload: any) {
-    console.log('Service OrderService patched realtion from emitted event');
   }
 }
