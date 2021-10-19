@@ -34,6 +34,6 @@ describe('SpaceShipController', () => {
     const spaceShip = {};
     controller.save(spaceShip);
 
-    expect(service.save).toBeCalledTimes(3);
+    expect(service.save).toBeCalled();
   });
 });
