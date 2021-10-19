@@ -4,6 +4,14 @@ import { SpaceShipService } from './space-ship.service';
 
 jest.mock('./space-ship.service');
 
+/**
+ * describe test area or suite name
+ *
+ * then setup up individual cases testing unit functions
+ *
+ *
+ */
+
 describe('SpaceShipController', () => {
   let controller: SpaceShipController;
   let service: SpaceShipService;
@@ -26,6 +34,6 @@ describe('SpaceShipController', () => {
     const spaceShip = {};
     controller.save(spaceShip);
 
-    expect(service.save).toHaveBeenCalled();
+    expect(service.save).toBeCalledTimes(3);
   });
 });
